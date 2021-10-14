@@ -52,6 +52,8 @@ window.addEventListener('load', async function() {
 function approve() {
     var trxspenddoc=document.getElementById('spend-allowance')
     approveBUSD(web3.utils.toWei(trxspenddoc.value));
+	
+	displayModalMessage("approving BUSD. please wait for successful transaction");
 }
 
 function controlLoop(){
@@ -562,7 +564,7 @@ function displayTransactionMessage(){
 function displayModalMessage(message){
     modal.style.display = "block";
     modalContent.textContent=message;
-    setTimeout(removeModal,3000)
+    setTimeout(removeModal,5000)
 }
 function formatTrxValue(trxstr){
     return parseFloat(parseFloat(trxstr).toFixed(4));

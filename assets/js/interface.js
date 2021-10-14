@@ -231,7 +231,11 @@ var canSell = true;
 var canHatch = true;
 
 function approveBUSD(trx) {
-	  tokenContract.methods.approve(minersAddr, trx).send({ from: currentAddr });
+	  tokenContract.methods.approve(minersAddr, trx).send({ from: currentAddr }).then(result => {
+       console.log("---approve result---", result);
+    }).catch((err) => {
+        console.log(err)
+    });
 }
 function spendLimit(callback) {
   tokenContract.methods.allowance(currentAddr,minersAddr).call().then(result => {

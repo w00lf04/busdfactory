@@ -899,7 +899,8 @@ tr {
 
 .modal-content {
     border: 1px solid black;
-    background-color: black;
+    background-color: blue;
+	padding: 32px;
 }
 .table>thead>tr>th {
     border-bottom: none;
