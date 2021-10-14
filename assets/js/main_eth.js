@@ -50,18 +50,13 @@ window.addEventListener('load', async function() {
 })
 
 function approve() {
-	//document.getElementById("buyButton").disabled = "disabled";	
-	$('#buyButton').prop('disabled', true);
 	
     var trxspenddoc=document.getElementById('spend-allowance')
-    //approveBUSD(web3.utils.toWei(trxspenddoc.value), function(){
-	approveBUSD(web3.utils.toWei("0"), function(){
-		//document.getElementById("buyButton").disabled = "";
-		$('#buyButton').prop('disabled', false);
+	approveBUSD(web3.utils.toWei("0"), function(){		
+		
 	},
 	function(error){
-		//document.getElementById("buyButton").disabled = "";
-		$('#buyButton').prop('disabled', false);
+		
 	});
 	
 	displayModalMessage("approving BUSD. please wait for successful transaction");
@@ -98,6 +93,15 @@ function refreshData(){
         var raw=web3.utils.fromWei(result);
         spend=raw;
         console.log("spend limit=" + spend);
+		
+		var buyAmount = parseFloat(document.getElementById("eth-to-spend").value);
+		
+		if( spend > buyAmount){
+			$('#buyButton').prop('disabled', true);
+		}
+		else{
+			$('#buyButton').prop('disabled', false);
+		}
     });
 
     var balanceElem = document.getElementById('contract-balance');
