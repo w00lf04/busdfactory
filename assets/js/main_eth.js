@@ -216,7 +216,7 @@ function buyEggs2(){
         ref=currentAddr
     }
     //console.log('hatcheggs ref ',ref)
-	displayModalMessage("Transaction submitted. please wait...");
+	//displayModalMessage("Transaction submitted. please wait...");
     buyEggs(ref, trxspenddoc.value, function(){
         displayTransactionMessage();
     });
