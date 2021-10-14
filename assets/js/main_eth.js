@@ -104,18 +104,18 @@ function refreshData(){
         lastHatchTime=lh
     });
     getMyEggs(function(eggs){
-        if(lastNumEggs!=eggs){
-            lastNumEggs=eggs
-            lastUpdate=new Date().getTime()
-            //updateEggNumber(eggs/eggstohatch1)
-        }
-        var timeuntilfulldoc=document.getElementById('until-full')
-        secondsuntilfull=eggstohatch1-eggs/lastNumMiners
-        lastSecondsUntilFull=secondsuntilfull
-        timeuntilfulldoc.textContent=secondsToString(lastUpdate)
-        if(lastNumMiners==0){
-            timeuntilfulldoc.textContent='?'
-        }
+        //if(lastNumEggs!=eggs){
+        //    lastNumEggs=eggs
+        //    lastUpdate=new Date().getTime()
+        //    //updateEggNumber(eggs/eggstohatch1)
+        //}
+        //var timeuntilfulldoc=document.getElementById('until-full')
+        //secondsuntilfull=eggstohatch1-eggs/lastNumMiners
+        //lastSecondsUntilFull=secondsuntilfull
+        //timeuntilfulldoc.textContent=secondsToString(secondsuntilfull)
+        //if(lastNumMiners==0){
+        //    timeuntilfulldoc.textContent='?'
+        //}
     });
     getMyMiners(function(miners){
         lastNumMiners=miners
