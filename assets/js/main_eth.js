@@ -94,6 +94,8 @@ function refreshData(){
         spend=raw;
         console.log("spend limit=" + spend);
 		
+		document.getElementById("approvedValue").innerText = "approved: "+spend;
+		
 		var buyAmount = parseFloat(document.getElementById("eth-to-spend").value);
 		
 		if( buyAmount > parseFloat(spend) ){
