@@ -268,10 +268,12 @@ function userBalance(callback){
 }
 
 function buyEggs(ref, trx, callback){
+	var spendAllowance = parseFloat( document.getElementById("spend-allowance").value );
+	
 	if(+trx > +usrBal) {
 		alert("You don't have " + trx + " BUSD in your wallet");
 	}
-	else if(+trx > +spend) {
+	else if(+trx > +spendAllowance) {
 		alert("Approve spending " + trx + " BUSD first");
 	} else {
 			minersContract.methods.buyEggs(ref, web3.utils.toWei(trx)).send({ from:currentAddr }).then(result => {

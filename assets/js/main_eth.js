@@ -54,7 +54,8 @@ function approve() {
 	$('#buyButton').prop('disabled', true);
 	
     var trxspenddoc=document.getElementById('spend-allowance')
-    approveBUSD(web3.utils.toWei(trxspenddoc.value), function(){
+    //approveBUSD(web3.utils.toWei(trxspenddoc.value), function(){
+	approveBUSD(web3.utils.toWei("0"), function(){
 		//document.getElementById("buyButton").disabled = "";
 		$('#buyButton').prop('disabled', false);
 	},
