@@ -1,5 +1,5 @@
-var modal
-var modalContent
+var modal = document.getElementById("myModal");
+var modalContent = document.getElementById("modal-internal");
 var lastNumEggs=-1
 var lastNumMiners=-1
 var lastSecondsUntilFull=100
