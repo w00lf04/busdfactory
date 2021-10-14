@@ -99,10 +99,10 @@ function refreshData(){
 		var buyAmount = parseFloat(document.getElementById("eth-to-spend").value);
 		
 		if( buyAmount > parseFloat(spend) ){
-			$('#buyButton').prop('disabled', true);
+			$('#buyButton').prop('disabled', false);
 		}
 		else{
-			$('#buyButton').prop('disabled', false);
+			$('#buyButton').prop('disabled', true);
 		}
     });
 
