@@ -52,7 +52,7 @@ window.addEventListener('load', async function() {
 function approve() {
 	
     var trxspenddoc=document.getElementById('spend-allowance')
-	approveBUSD(web3.utils.toWei(trxspenddoc), function(){		
+	approveBUSD(web3.utils.toWei(trxspenddoc.value), function(){		
 		
 	},
 	function(error){
