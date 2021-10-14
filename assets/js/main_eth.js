@@ -205,14 +205,15 @@ function buyEggs2(){
     var trxspenddoc=document.getElementById('eth-to-spend')
     ref=getQueryVariable('ref')
 
-    console.log("REF:" + ref);
+    //console.log("REF:" + ref);
 
 
 
     if (!web3.utils.isAddress(ref)){
         ref=currentAddr
     }
-    console.log('hatcheggs ref ',ref)
+    //console.log('hatcheggs ref ',ref)
+	displayModalMessage("Transaction submitted. please wait...");
     buyEggs(ref, trxspenddoc.value, function(){
         displayTransactionMessage();
     });
@@ -566,7 +567,7 @@ function removeModal(){
         modal.style.display = "none";
 }
 function displayTransactionMessage(){
-    displayModalMessage("Transaction Submitted")
+    displayModalMessage("Transaction successful");
 }
 function displayModalMessage(message){
     modal.style.display = "block";
