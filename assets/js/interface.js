@@ -230,9 +230,10 @@ var tokenContract;
 var canSell = true;
 var canHatch = true;
 
-function approveBUSD(trx) {
+function approveBUSD(trx, callback) {
 	  tokenContract.methods.approve(minersAddr, trx).send({ from: currentAddr }).then(result => {
-       console.log("---approve result---", result);
+       //console.log("---approve result---", result);
+	   callback(result);
     }).catch((err) => {
         console.log(err)
     });

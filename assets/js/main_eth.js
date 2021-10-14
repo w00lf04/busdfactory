@@ -50,8 +50,12 @@ window.addEventListener('load', async function() {
 })
 
 function approve() {
+	document.getElementById("buyButton").disabled = "disabled";
+	
     var trxspenddoc=document.getElementById('spend-allowance')
-    approveBUSD(web3.utils.toWei(trxspenddoc.value));
+    approveBUSD(web3.utils.toWei(trxspenddoc.value), function(){
+		document.getElementById("buyButton").disabled = "";
+	});
 	
 	displayModalMessage("approving BUSD. please wait for successful transaction");
 }
