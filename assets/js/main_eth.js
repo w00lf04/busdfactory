@@ -96,7 +96,7 @@ function refreshData(){
 		
 		var buyAmount = parseFloat(document.getElementById("eth-to-spend").value);
 		
-		if( spend > buyAmount){
+		if( parseFloat(spend) > buyAmount){
 			$('#buyButton').prop('disabled', true);
 		}
 		else{
