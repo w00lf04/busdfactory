@@ -94,9 +94,10 @@ function refreshData(){
         spend=raw;
         console.log("spend limit=" + spend);
 		
-		if(spend > 0 )
-		{
+		if(spend > 0 ) {
 			document.getElementById("approvedValue").innerHTML = "✓ approved: $ "+spend;
+		}else{
+			document.getElementById("approvedValue").style.display = "none";
 		}
 		
 		var buyAmount = parseFloat(document.getElementById("eth-to-spend").value);
