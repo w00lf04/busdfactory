@@ -720,7 +720,7 @@ h4 {
   height: auto;
   width: 20px;
   float: left;
-  margin-right: 12px;
+  margin-right: 12px!important;
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
