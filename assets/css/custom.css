@@ -480,6 +480,7 @@ h4 {
 
 .btn-hatch:focus, .btn-hatch:hover{
     box-shadow: 0 0 20px 5px rgba(232,252,255, 0.4);
+	color: blue;
 }
 
 .btn-sell{
@@ -502,6 +503,7 @@ h4 {
 
 .btn-sell:focus, .btn-sell:hover{
     box-shadow: 0 0 20px 5px rgba(232,252,255, 0.4);
+	color: blue;
 }
 
 @media (max-width: 750px){
