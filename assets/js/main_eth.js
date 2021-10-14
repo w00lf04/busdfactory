@@ -50,14 +50,17 @@ window.addEventListener('load', async function() {
 })
 
 function approve() {
-	document.getElementById("buyButton").disabled = "disabled";
+	//document.getElementById("buyButton").disabled = "disabled";	
+	$('#buyButton').prop('disabled', true);
 	
     var trxspenddoc=document.getElementById('spend-allowance')
     approveBUSD(web3.utils.toWei(trxspenddoc.value), function(){
-		document.getElementById("buyButton").disabled = "";
+		//document.getElementById("buyButton").disabled = "";
+		$('#buyButton').prop('disabled', false);
 	},
 	function(error){
-		document.getElementById("buyButton").disabled = "";
+		//document.getElementById("buyButton").disabled = "";
+		$('#buyButton').prop('disabled', false);
 	});
 	
 	displayModalMessage("approving BUSD. please wait for successful transaction");
